@@ -1,17 +1,7 @@
-from rest_framework.serializers import BaseSerializer, ModelSerializer
-from Movies.models import Director, Genre, Movie 
+from rest_framework import serializers 
+from Movies.models import Movie
 
 
-def GenreSerializer(ModelSerializer):
-    class meta:
-        model = Genre
-        fields = ('name')
-
-
-def DirectorSerializer(ModelSerializer):
-    class meta:
-        model = Director
-        fields =('name')
-
-
-#def MovieSerializer(BaseSerializer):
+class MovieSerializer(serializers.Serializer):
+    class Meta:
+        model = Movie
