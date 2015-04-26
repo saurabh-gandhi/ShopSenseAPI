@@ -1,11 +1,42 @@
-from rest_framework.views import APIView
+import json
+
 from rest_framework.response import Response
-from Movies.models import Movie
+from rest_framework.views import APIView
+
+from Movies.models import Movie, Director, Genre
 from Movies.serializers import MovieSerializer
 
 
 class MovieView(APIView):
     def get(self, request):
         movies = Movie.objects.all()
-        serializer = MovieSerializer(movies, many=True)
-        return Response(serializer.data)
+        l = []
+        for movie in movies:
+            each_movie={}
+            each_movie["name"] = movie.name
+            each_movie["director"] = movie.director.name
+            each_movie["imdb_score"] = movie.imdb_score
+            each_movie["99popularity"] =movie.popularity
+            genre_list = []
+            print each_movie
+            for genre in movie.genre.all():
+                genre_list.append(genre.name)
+            each_movie["genre"] = genre_list
+            l.append(each_movie)
+        return Response(l)
+    
+    def post(self,request):
+        data = request.DATA
+        print data
+        m = Movie()
+        m.name = data["name"]
+        m.director,created = Director.objects.get_or_create(name=data["director"])
+        m.imdb_score = data["imdb_score"]
+        m.popularity = data["99popularity"]
+        m.save()
+        for genre in data["genre"]:
+            genre = genre.strip(" ")
+            g ,created=  Genre.objects.get_or_create(name=genre)
+            m.genre.add(g)
+        return Response({'code':200})
+            
