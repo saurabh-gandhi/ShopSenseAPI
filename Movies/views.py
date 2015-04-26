@@ -41,7 +41,7 @@ class MovieView(APIView):
         return Response(l)
 
     def post(self, request):
-        data = request.DAT
+        data = request.DATA
         m = Movie()
         m.name = data["name"]
         m.director, created = Director.objects.get_or_create(name=data["director"])
