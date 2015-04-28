@@ -11,7 +11,7 @@ urlpatterns = [
 urlpatterns += [
     url(r'^search/director/(?P<director>[A-Za-z ]+)/$',
         views.MovieSearchByDirector.as_view()),
-    url(r'^search/title/(?P<title>[A-Za-z ]+)/$',
+    url(r'^search/title/(?P<title>[A-Za-z :.-]+)/$',
         views.MovieSearchByTitle.as_view()),
     url(r'^search/genre/(?P<genre>[A-Za-z ]+)/$',
         views.MovieSearchByGenre.as_view()),

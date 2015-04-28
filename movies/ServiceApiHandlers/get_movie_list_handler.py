@@ -18,7 +18,7 @@ def handle_request(movies):
             each_movie["genre"] = genre_list
             movie_list.append(each_movie)
             print movie_list
-            return movie_list
+        return movie_list
     except Exception , e:
         print e
         return {"error"}
