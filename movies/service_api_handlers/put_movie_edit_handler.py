@@ -1,5 +1,7 @@
-from movies.models import Director, Genre , Movie
-from movies.utils import reproduceResponse
+from rest_framework import status
+
+from movies.models import Director, Genre, Movie
+from movies.utils import handle_response
 
 
 def handle_request(data, title):
@@ -20,4 +22,5 @@ def handle_request(data, title):
             movie.genre.add(genre_instance)
     except Exception, e:
         print e
-    return reproduceResponse([movie])
+        return {"Bad Request", status.HTTP_400_BAD_REQUEST}
+    return handle_response([movie])

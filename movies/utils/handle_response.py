@@ -1,8 +1,8 @@
 from rest_framework import status
-from movies.models import Movie
+from rest_framework.response import Response
 
 
-def handle_request(movies):
+def handle_response(movies):
     try:
         movie_list = []
         for movie in movies:
@@ -17,8 +17,6 @@ def handle_request(movies):
                 genre_list.append(genre.name)
             each_movie["genre"] = genre_list
             movie_list.append(each_movie)
-            print movie_list
         return movie_list
-    except Exception , e:
+    except Exception, e:
         print e
-        return {"error"}
