@@ -10,10 +10,13 @@ class MovieSearchByDirector(APIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
     def get(self, request, director):
-        movies = Movie.objects.filter(director=
-                                      Director.objects.get(name=director))
-        if movies.count() > 0:
-            return Response(handle_request(movies))
-        else:
-            return Response("No Entry found",
-                            status.HTTP_204_NO_CONTENT)
+        try:
+            director_instance, created = Director.objects.get_or_create(name=director)
+            movies = Movie.objects.filter(genre=director_instance)
+            if movies.count() > 0:
+                return Response(handle_request(movies))
+            else:
+                return Response("No Entry found",
+                                status.HTTP_204_NO_CONTENT)
+        except:
+            return Response("Error", status.HTTP_500_INTERNAL_SERVER_ERROR)
