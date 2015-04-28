@@ -1,0 +1,190 @@
+[2015-04-28 21:58:15 +0000] [522] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 21:58:15 +0000] [522] [INFO] Listening at: http://0.0.0.0:5000 (522)
+[2015-04-28 21:58:15 +0000] [522] [INFO] Using worker: sync
+[2015-04-28 21:58:15 +0000] [529] [INFO] Booting worker with pid: 529
+[2015-04-28 21:58:17 +0000] [529] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/home/zlemma/ZlemmaRepositories/ShopSenseAPI/ShopSenseAPI/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+    django.setup()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/__init__.py", line 17, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 48, in __getattr__
+    self._setup(name)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 44, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 92, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named zdb_common.settings.local
+Traceback (most recent call last):
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/home/zlemma/ZlemmaRepositories/ShopSenseAPI/ShopSenseAPI/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+    django.setup()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/__init__.py", line 17, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 48, in __getattr__
+    self._setup(name)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 44, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 92, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named zdb_common.settings.local
+[2015-04-28 21:58:17 +0000] [529] [INFO] Worker exiting (pid: 529)
+[2015-04-28 21:58:17 +0000] [522] [INFO] Shutting down: Master
+[2015-04-28 21:58:17 +0000] [522] [INFO] Reason: Worker failed to boot.
+[2015-04-28 21:58:38 +0000] [547] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 21:58:38 +0000] [547] [INFO] Listening at: http://0.0.0.0:5000 (547)
+[2015-04-28 21:58:38 +0000] [547] [INFO] Using worker: sync
+[2015-04-28 21:58:38 +0000] [554] [INFO] Booting worker with pid: 554
+[2015-04-28 21:58:38 +0000] [554] [ERROR] Exception in worker process:
+Traceback (most recent call last):
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/home/zlemma/ZlemmaRepositories/ShopSenseAPI/ShopSenseAPI/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+    django.setup()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/__init__.py", line 17, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 48, in __getattr__
+    self._setup(name)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 44, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 92, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named zdb_common.settings.local
+Traceback (most recent call last):
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/arbiter.py", line 507, in spawn_worker
+    worker.init_process()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/workers/base.py", line 118, in init_process
+    self.wsgi = self.app.wsgi()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/gunicorn/util.py", line 355, in import_app
+    __import__(module)
+  File "/home/zlemma/ZlemmaRepositories/ShopSenseAPI/ShopSenseAPI/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/core/wsgi.py", line 14, in get_wsgi_application
+    django.setup()
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/__init__.py", line 17, in setup
+    configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 48, in __getattr__
+    self._setup(name)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 44, in _setup
+    self._wrapped = Settings(settings_module)
+  File "/home/zlemma/drf/local/lib/python2.7/site-packages/django/conf/__init__.py", line 92, in __init__
+    mod = importlib.import_module(self.SETTINGS_MODULE)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+ImportError: No module named zdb_common.settings.local
+[2015-04-28 21:58:38 +0000] [554] [INFO] Worker exiting (pid: 554)
+[2015-04-28 21:58:38 +0000] [547] [INFO] Shutting down: Master
+[2015-04-28 21:58:38 +0000] [547] [INFO] Reason: Worker failed to boot.
+[2015-04-28 21:59:48 +0000] [602] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 21:59:48 +0000] [602] [INFO] Listening at: http://0.0.0.0:5000 (602)
+[2015-04-28 21:59:48 +0000] [602] [INFO] Using worker: sync
+[2015-04-28 21:59:48 +0000] [609] [INFO] Booting worker with pid: 609
+[2015-04-28 22:00:29 +0000] [628] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 22:00:29 +0000] [628] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:00:29 +0000] [628] [ERROR] Retrying in 1 second.
+[2015-04-28 22:00:30 +0000] [628] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:00:30 +0000] [628] [ERROR] Retrying in 1 second.
+[2015-04-28 22:00:41 +0000] [650] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 22:00:41 +0000] [650] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:00:41 +0000] [650] [ERROR] Retrying in 1 second.
+[2015-04-28 22:00:42 +0000] [650] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:00:42 +0000] [650] [ERROR] Retrying in 1 second.
+[2015-04-28 22:00:43 +0000] [650] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:00:43 +0000] [650] [ERROR] Retrying in 1 second.
+[2015-04-28 22:00:44 +0000] [650] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:00:44 +0000] [650] [ERROR] Retrying in 1 second.
+[2015-04-28 22:00:45 +0000] [650] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:00:45 +0000] [650] [ERROR] Retrying in 1 second.
+[2015-04-28 22:00:46 +0000] [650] [ERROR] Can't connect to ('0.0.0.0', 5000)
+[2015-04-28 22:01:43 +0000] [692] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 22:01:43 +0000] [692] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:01:43 +0000] [692] [ERROR] Retrying in 1 second.
+[2015-04-28 22:01:44 +0000] [692] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:01:44 +0000] [692] [ERROR] Retrying in 1 second.
+[2015-04-28 22:01:45 +0000] [692] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:01:45 +0000] [692] [ERROR] Retrying in 1 second.
+[2015-04-28 22:01:46 +0000] [692] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:01:46 +0000] [692] [ERROR] Retrying in 1 second.
+[2015-04-28 22:01:47 +0000] [692] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2015-04-28 22:01:47 +0000] [692] [ERROR] Retrying in 1 second.
+[2015-04-28 22:01:48 +0000] [692] [ERROR] Can't connect to ('0.0.0.0', 5000)
+[2015-04-28 22:02:34 +0000] [754] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 22:02:34 +0000] [754] [INFO] Listening at: http://0.0.0.0:5000 (754)
+[2015-04-28 22:02:34 +0000] [754] [INFO] Using worker: sync
+[2015-04-28 22:02:34 +0000] [770] [INFO] Booting worker with pid: 770
+[2015-04-28 22:02:47 +0000] [754] [INFO] Handling signal: winch
+[2015-04-28 22:19:12 +0000] [754] [INFO] Handling signal: int
+[2015-04-28 16:49:12 +0000] [770] [INFO] Worker exiting (pid: 770)
+[2015-04-28 22:19:12 +0000] [754] [INFO] Shutting down: Master
+[2015-04-28 22:21:35 +0000] [1468] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 22:21:35 +0000] [1468] [INFO] Listening at: http://0.0.0.0:5000 (1468)
+[2015-04-28 22:21:35 +0000] [1468] [INFO] Using worker: sync
+[2015-04-28 22:21:35 +0000] [1475] [INFO] Booting worker with pid: 1475
+[2015-04-28 22:33:59 +0000] [1468] [INFO] Handling signal: int
+[2015-04-28 17:03:59 +0000] [1475] [INFO] Worker exiting (pid: 1475)
+[2015-04-28 22:33:59 +0000] [1468] [INFO] Shutting down: Master
+[2015-04-28 22:34:02 +0000] [1694] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 22:34:02 +0000] [1694] [INFO] Listening at: http://0.0.0.0:5000 (1694)
+[2015-04-28 22:34:02 +0000] [1694] [INFO] Using worker: sync
+[2015-04-28 22:34:02 +0000] [1701] [INFO] Booting worker with pid: 1701
+[2015-04-28 22:36:03 +0000] [1694] [INFO] Handling signal: int
+[2015-04-28 17:06:03 +0000] [1701] [INFO] Worker exiting (pid: 1701)
+[2015-04-28 22:36:04 +0000] [1694] [INFO] Shutting down: Master
+[2015-04-28 22:44:04 +0000] [2333] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 22:44:04 +0000] [2333] [INFO] Listening at: http://0.0.0.0:5000 (2333)
+[2015-04-28 22:44:04 +0000] [2333] [INFO] Using worker: sync
+[2015-04-28 22:44:04 +0000] [2341] [INFO] Booting worker with pid: 2341
+[2015-04-28 22:44:07 +0000] [2333] [INFO] Handling signal: int
+[2015-04-28 17:14:07 +0000] [2341] [INFO] Worker exiting (pid: 2341)
+[2015-04-28 22:44:07 +0000] [2333] [INFO] Shutting down: Master

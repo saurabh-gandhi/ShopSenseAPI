@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from rest_framework import generics
+from rest_framework import generics, permissions
 
 from movies.utils.serializers import UserSerializer
 
