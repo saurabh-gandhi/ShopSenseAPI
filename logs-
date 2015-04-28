@@ -1,0 +1,19 @@
+[2015-04-28 22:59:54 +0000] [2751] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 22:59:54 +0000] [2751] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2015-04-28 22:59:54 +0000] [2751] [ERROR] Retrying in 1 second.
+[2015-04-28 22:59:55 +0000] [2751] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2015-04-28 22:59:55 +0000] [2751] [ERROR] Retrying in 1 second.
+[2015-04-28 22:59:56 +0000] [2751] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2015-04-28 22:59:56 +0000] [2751] [ERROR] Retrying in 1 second.
+[2015-04-28 22:59:57 +0000] [2751] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2015-04-28 22:59:57 +0000] [2751] [ERROR] Retrying in 1 second.
+[2015-04-28 22:59:58 +0000] [2751] [ERROR] Connection in use: ('0.0.0.0', 8000)
+[2015-04-28 22:59:58 +0000] [2751] [ERROR] Retrying in 1 second.
+[2015-04-28 22:59:59 +0000] [2751] [ERROR] Can't connect to ('0.0.0.0', 8000)
+[2015-04-28 23:00:31 +0000] [2796] [INFO] Starting gunicorn 19.3.0
+[2015-04-28 23:00:31 +0000] [2796] [INFO] Listening at: http://0.0.0.0:8000 (2796)
+[2015-04-28 23:00:31 +0000] [2796] [INFO] Using worker: sync
+[2015-04-28 23:00:31 +0000] [2803] [INFO] Booting worker with pid: 2803
+[2015-04-28 23:00:51 +0000] [2796] [INFO] Handling signal: int
+[2015-04-28 17:30:51 +0000] [2803] [INFO] Worker exiting (pid: 2803)
+[2015-04-28 23:00:51 +0000] [2796] [INFO] Shutting down: Master
