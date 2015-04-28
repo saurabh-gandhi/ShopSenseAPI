@@ -1,6 +1,8 @@
 from rest_framework import status
-from movies.models import Movie
 from rest_framework.response import Response
+
+from movies.models import Movie
+from movies.utils.logger import logger
 
 
 def handle_request(movies):
@@ -18,7 +20,8 @@ def handle_request(movies):
                 genre_list.append(genre.name)
             each_movie["genre"] = genre_list
             movie_list.append(each_movie)
-            print movie_list
+        logger.info("Displaying the list of Movies")
         return Response(movie_list)
-    except Exception , e:
-        print e
+    except Exception, e:
+        logger.info("Caught exception while GET movie List")
+        logger.error(e)
