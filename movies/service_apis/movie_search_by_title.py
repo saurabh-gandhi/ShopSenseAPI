@@ -15,7 +15,7 @@ class MovieSearchByTitle(APIView):
         logger.info("GET Search movies with title %s" % (title))
         movies = Movie.objects.filter(name=title)
         if movies:
-            return Response(get_movie_list_handler.handle_request(movies))
+            return get_movie_list_handler.handle_request(movies)
         else:
             return Response("No Entry found",
                             status.HTTP_204_NO_CONTENT)
@@ -29,3 +29,4 @@ class MovieSearchByTitle(APIView):
         logger.info("DELETE delete movie with title %s" % (title))
         movie = Movie.objects.filter(name=title)
         movie.delete()
+        Response("Movie Deleted", status.HTTP_200_OK)

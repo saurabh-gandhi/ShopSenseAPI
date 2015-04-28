@@ -10,10 +10,11 @@ from movies.service_apis.userlist import UserList
 
 
 urlpatterns = [
+    url(r'^$', MovieList.as_view()),
     url(r'^users/$', UserList.as_view()),
     url(r'^users/(?P<pk>[0-9]+)/$', UserDetail.as_view()),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^movies/', MovieList.as_view())
+
 ]
 
 urlpatterns += [

@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from movies.models import Movie, Genre
-from movies.service_api_handlers.get_movie_list_handler import handle_request
+from movies.utils.handle_response import handle_response
 from movies.utils.logger import logger
 
 
@@ -16,7 +16,7 @@ class MovieSearchByGenre(APIView):
             genre_instance, created = Genre.objects.get_or_create(name=genre)
             movies = Movie.objects.filter(genre=genre_instance)
             if movies.count() > 0:
-                return Response(handle_request(movies))
+                return Response(handle_response(movies))
             else:
                 logger.info("No results matching the search query")
                 return Response("No Results matching the search query",

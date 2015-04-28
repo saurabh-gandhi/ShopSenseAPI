@@ -15,7 +15,6 @@ def handle_request(movies):
             each_movie["imdb_score"] = movie.imdb_score
             each_movie["99popularity"] = movie.popularity
             genre_list = []
-            print each_movie
             for genre in movie.genre.all():
                 genre_list.append(genre.name)
             each_movie["genre"] = genre_list
